@@ -37,7 +37,7 @@ public class Student implements Serializable {
     @JsonIgnoreProperties({"admin","password","student","enabled","accountNonExpired","accountNonLocked","credentialsNonExpired"})
     private MyUser myUser;
 
-    @OneToMany(mappedBy = "student",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "student")
     @JsonIgnoreProperties("student")
     private List<Book> bookList;
 
